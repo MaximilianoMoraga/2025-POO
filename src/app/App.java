@@ -6,19 +6,62 @@ public class App extends javax.swing.JFrame {
 
     public App() {
         initComponents();
-        //-> aqui se agregan cosas
+        //-> aqui se agregan cosas 
+        //sube los videos maxi, ponte serio
+        this.home.setSize(800, 800);
+        this.setLocationRelativeTo(null);
+        this.home.setLocationRelativeTo(this);
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        home = new javax.swing.JFrame();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         loginTXTUsername = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         loginBTNLogin = new javax.swing.JButton();
         loginTXTPassword = new javax.swing.JTextField();
+
+        jLabel3.setText("Home");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel3)
+                .addContainerGap(61, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout homeLayout = new javax.swing.GroupLayout(home.getContentPane());
+        home.getContentPane().setLayout(homeLayout);
+        homeLayout.setHorizontalGroup(
+            homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(homeLayout.createSequentialGroup()
+                .addGap(97, 97, 97)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(203, Short.MAX_VALUE))
+        );
+        homeLayout.setVerticalGroup(
+            homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(homeLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(177, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -93,6 +136,8 @@ public class App extends javax.swing.JFrame {
         
         if( nombreUsuario.equals("muck") && passUsuario.equals("123")  ){
             System.out.println("Credenciales validas");
+            this.setVisible(false);
+            this.home.setVisible(true);
         }
         else{
             System.out.println("Credenciales invalidas");
@@ -127,9 +172,12 @@ public class App extends javax.swing.JFrame {
     // barbara +5
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JFrame home;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JButton loginBTNLogin;
     private javax.swing.JTextField loginTXTPassword;
     private javax.swing.JTextField loginTXTUsername;
