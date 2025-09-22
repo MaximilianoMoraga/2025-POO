@@ -1,0 +1,18 @@
+classDiagram
+direction LR
+class Propiedad {+id:int;+codigo:String;+tipo:String;+direccion:String;+precio:double;+estado:String}
+class Agente {+id:int;+nombre:String;+rut:String}
+class Cliente {+id:int;+nombre:String;+rut:String;+telefono:String}
+class Publicacion {+id:int;+fecha:LocalDate;+portal:String;+estado:String}
+class Visita {+id:int;+fecha:LocalDateTime;+comentario:String}
+class Contrato {+id:int;+tipo:String;+fechaInicio:LocalDate;+fechaFin:LocalDate;+monto:double}
+class Pago {+id:int;+monto:double;+fecha:LocalDate;+metodo:String}
+
+Agente "1" --> "0..*" Publicacion
+Propiedad "1" --> "0..*" Publicacion
+Cliente "1" --> "0..*" Visita
+Propiedad "1" --> "0..*" Visita
+Contrato "1" --> "1" Propiedad
+Contrato "1" --> "1" Cliente
+Agente "1" --> "0..*" Contrato
+Contrato "0..*" --> "1" Pago
